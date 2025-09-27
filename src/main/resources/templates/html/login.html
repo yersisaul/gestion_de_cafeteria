@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Administrador</title>
+    <link rel="stylesheet" href="../styles/styles-login.css">
+</head>
+<body>
+    <div class="contenedor-login">
+        <h2>Panel de Administración</h2>
+        <form action="../php/login.php" method="POST">
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            <input type="password" name="clave" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <!-- Mensaje de error opcional -->
+        <?php if (isset($_GET['error'])): ?>
+            <p class="error">Usuario o contraseña incorrectos</p>
+        <?php endif; ?>
+    </div>
+</body>
+</html>

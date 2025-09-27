@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración - Cafetería</title>
+  <link rel="stylesheet" href="../styles/styles-panel.css">
+</head>
+<body>
+  <div class="panel">
+    <!-- Barra lateral de navegación -->
+    <aside class="sidebar">
+      <h2>Admin Café</h2>
+      <nav>
+        <ul>
+          <li><a href="#dashboard" class="active">Dashboard</a></li>
+          <li><a href="#reservas">Reservas</a></li>
+          <li><a href="#mesas">Mesas</a></li>
+          <li><a href="#configuracion">Configuración</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+
+      <!-- Dashboard -->
+      <section id="dashboard" class="section">
+        <h1>Dashboard</h1>
+        <div class="widgets">
+          <div class="widget">
+            <h3>Total de Reservas Hoy</h3>
+            <p>12</p>
+          </div>
+          <div class="widget">
+            <h3>Mesas Ocupadas Actualmente</h3>
+            <p>5</p>
+          </div>
+          <div class="widget">
+            <h3>Mesas Disponibles</h3>
+            <p>7</p>
+          </div>
+        </div>
+
+        <h2>Próximas Reservas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>Cliente</th>
+              <th>Personas</th>
+              <th>Mesa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>10:00 AM</td><td>Ana Pérez</td><td>3</td><td>4</td></tr>
+            <tr><td>11:30 AM</td><td>Mario Ruiz</td><td>2</td><td>1</td></tr>
+            <tr><td>12:00 PM</td><td>Lucía Torres</td><td>4</td><td>2</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Reservas -->
+      <section id="reservas" class="section">
+        <h1>Reservas</h1>
+        <div class="filtros">
+          <input type="date">
+          <select>
+            <option value="">Todos los estados</option>
+            <option value="pendiente">Pendiente</option>
+            <option value="confirmada">Confirmada</option>
+            <option value="cancelada">Cancelada</option>
+          </select>
+          <input type="text" placeholder="Buscar cliente">
+          <button>Crear Nueva Reserva</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Cliente</th>
+              <th>Invitados</th>
+              <th>Mesa</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2025-06-25</td><td>13:00</td><td>Pedro Gómez</td><td>4</td><td>3</td><td>Confirmada</td></tr>
+            <tr><td>2025-06-25</td><td>14:30</td><td>Laura Díaz</td><td>2</td><td>1</td><td>Pendiente</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Mesas -->
+      <section id="mesas" class="section">
+        <h1>Gestión de Mesas</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Número de Mesa</th>
+              <th>Capacidad</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>2</td><td><button>Editar</button> <button>Eliminar</button></td></tr>
+            <tr><td>2</td><td>4</td><td><button>Editar</button> <button>Eliminar</button></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Configuración -->
+      <section id="configuracion" class="section">
+        <h1>Configuración General</h1>
+        <form>
+          <h3>Horarios de Operación</h3>
+          <label>Lunes: <input type="time"> a <input type="time"></label><br>
+          <label>Martes: <input type="time"> a <input type="time"></label><br>
+          <!-- Repetir para cada día -->
+
+          <h3>Ajustes de Reserva</h3>
+          <label>Intervalo de Reserva (min): <input type="number"></label><br>
+          <label>Máximo de Invitados por Reserva: <input type="number"></label><br>
+          <button type="submit">Guardar</button>
+        </form>
+      </section>
+
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

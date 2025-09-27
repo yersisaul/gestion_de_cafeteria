@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Arte del Cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&family=Pacifico&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../styles/styles-contacto.css">
+    <link rel="stylesheet" href="../styles/chatbot.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="logo">
+        <img src="img-galeria/Logo.png" alt="El Arte del Café">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="menu.html">Menú</a></li>   
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="contacto.html">Contáctanos</a></li>
+            <li><a href="reservas.html" class="btn-nav-reservar">RESERVAR AHORA</a></li>
+        </ul>
+    </nav>
+</header>
+ <!-- Contenido -->
+<main class="contenido-container">
+    <h1 class="contenido-title">El Arte del Café</h1>
+    <p class="contenido-subtitle">Compartiendo Felicidad</p>
+    
+    <div class="contenido-info">
+        <div class="info-section">
+            <h3>Ubicación</h3>
+            <p>Praderas de Pariachi 3ra. Etapa Mz B Lote 12 Ate, Lima - Perú</p>
+            <button class="map-button" style="display: none;">Ver en mapa</button>
+        </div>
+<!-- Mapa interactivo -->
+<div class="map-container">
+    <iframe
+        id="restaurant-map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62420.99209493445!2d-76.84460935328943!3d-12.006108370095522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDAwJzIyLjAiUyA3NsKwNTAnNDAuNiJX!5e0!3m2!1ses!2spe!4v1710000000000!5m2!1ses!2spe"
+        allowfullscreen
+        loading="lazy"
+        style="border:0;"
+    ></iframe>
+</div>
+    
+<div class="map-actions">
+    <button onclick="openGoogleMaps()" class="map-button">
+        <i class='bx bx-map'></i> Ver ubicación exacta
+    </button>
+    <button onclick="getDirections()" class="map-button">
+        <i class='bx bx-navigation'></i> Cómo llegar
+    </button>
+</div>
+ <!-- Contenido -->     
+        <div class="info-section">
+            <h3>Horarios</h3>
+            <p>Lunes a Viernes:<br>07:00 - 22:00</p>
+            <p>Sábados y Domingos:<br>08:00 - 23:00</p> 
+        </div>
+        
+        <div class="info-section contact-section">
+            <h3>Contacto</h3>
+            <p>+51 910 871 288</p>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="rating-section">
+            <span class="capacity">Foro 50 personas</span>
+            <span class="stars">★★★★★</span>
+        </div>
+    </div>
+</main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Enlaces útiles</h3>
+                <ul>
+                    <li><a href="Index.html">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-center">
+                <h3>Nuestras redes sociales:</h3>
+                <div class="social-links">
+                    <a href="https://api.whatsapp.com/send?phone=51910871288" target="_blank"><img src="img-home/whatsapp.png" alt="WhatsApp"></a>
+                    <a href="https://www.facebook.com/share/1AvYw4RsFh/" target="_blank"><img src="img-home/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/the_coffee_art?igsh=MWl4eHY4Z3RucmF1cQ==" target="_blank"><img src="img-home/instagram.png" alt="Instagram"></a>
+                </div>
+                <div class="footer-logo">
+                    <img src="img-galeria/Logo.png" alt="El Arte del Café">
+                </div>
+            </div>
+            
+            <div class="footer-right">
+                <h3>Horario de atención</h3>
+                <p>Lunes a Viernes: 7am - 10pm</p>
+                <p>Sábados y Domingos: 8am - 11pm</p>
+                <br>
+                <h3>Políticas</h3>
+                <ul>
+                    <li><a href="TyC.html">Términos y condiciones</a></li>
+                    <li><a href="politica.html">Política de privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Chatbot Flotante -->
+    <!-- Chatbot Structure -->
+        <div id="chatbot-container" class="chatbot-hidden">
+            <div class="chatbot-header">
+                <h3>Asistente Virtual - El Arte del Café</h3>
+                <button id="close-chatbot">×</button>
+            </div>
+            <div id="chatbot-messages"></div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-user-input" placeholder="Escribe tu mensaje..." aria-label="Mensaje para el chatbot">
+                <button id="chatbot-send">Enviar</button>
+            </div>
+        </div>
+        <button id="chatbot-toggle" aria-label="Abrir chat de asistencia">
+            <img src="img-galeria/Logo.png" alt="Icono de chat">
+        </button>
+
+        <div class="footer-info">
+            <p>📍 Dirección: Praderas de Pariachi 3ra. Etapa Mz B Lote 12 Ate, Lima - Perú</p>
+            <p>📞 Teléfono: +51 910 871 288</p>
+            <p>📧 Correo: elartedelcafe54@gmail.com</p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 El Arte del Café. Todos los derechos reservados.</p>
+            <p>Proyecto académico para la Universidad Tecnológica del Perú</p>
+        </div>
+    </footer>
+    <script src="../Javascript/chatbots.js"></script>
+    <script src="../Javascript/script-contacto.js"></script>
+</body>
+</html>    

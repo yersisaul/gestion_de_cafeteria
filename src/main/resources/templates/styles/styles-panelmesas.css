@@ -1,0 +1,69 @@
+.gestor-mesas {
+    padding: 20px;
+}
+
+.mesas-widgets {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.widget-mesa {
+    flex: 1;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-left: 5px solid #ccc;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.widget-mesa.total { border-color: #333; }
+.widget-mesa.disponible { border-color: green; color: green; }
+.widget-mesa.ocupada { border-color: orange; color: orange; }
+.widget-mesa.reservada { border-color: blue; color: blue; }
+.widget-mesa.limpieza { border-color: red; color: red; }
+
+.filtros-mesas form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.filtros-mesas select, .filtros-mesas input {
+    padding: 5px;
+}
+
+.tabla-mesas table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabla-mesas th, .tabla-mesas td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.estado.disponible { color: green; font-weight: bold; }
+.estado.ocupada { color: orange; font-weight: bold; }
+.estado.reservada { color: blue; font-weight: bold; }
+.estado.limpieza { color: red; font-weight: bold; }
+
+.acciones-globales {
+    margin-top: 20px;
+}
+
+.acciones-globales button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

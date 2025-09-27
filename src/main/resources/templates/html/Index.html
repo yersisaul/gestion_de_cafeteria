@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte del cafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles-inicio.css">
+    <link rel="stylesheet" href="../styles/chatbot.css">
+</head>
+<body>
+    <header>
+        <div class ="container-nav"> <!--modificado-->
+            <img class="logo" src="img-home/Logo.png" alt="Logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contacto.html">Contáctanos</a></li>
+                    <li><a href="reservas.html" class="btn-nav-reservar">Reservar Ahora</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="inicio" class="hero-banner">
+            <div class="hero-portada">
+                <img src="img-home/imgportada.jpg" alt="Café artesanal de alta calidad">
+            </div>
+    </section>
+    <section id="nosotros" aria-labelledby="nosotros-title">
+        <h2 id="nosotros-title">Nosotros</h2>
+        <div class="container">
+        <p> En El Arte del Caffè, nos apasiona ofrecer experiencias únicas a través de cada taza. Más que una cafetería, somos un espacio donde el sabor, la calidad y la calidez se fusionan para brindar momentos inolvidables.</p>
+        </div>
+    </section>
+
+    <section id="mision-vision" aria-labelledby="mision-vision-title">
+        <h2 id="mision-vision-title">Nuestra Misión y Visión</h2>
+        <div class="container">
+            <article class="mision-vision-item" tabindex="0">
+                <h3>Misión</h3>
+                <p>Ofrecer una experiencia gourmet en un ambiente acogedor, donde cada cliente pueda disfrutar plenamente de su momento, a través de productos de alta calidad y un servicio excepcional.
+                </p>
+            </article>
+            <article class="mision-vision-item" tabindex="0">
+                <h3>Visión</h3>
+                <p>Ser reconocidos como una cafetería líder en ofrecer experiencias memorables, combinando la excelencia en café gourmet con un entorno que invite al disfrute y la relajación​.​</p>
+            </article>
+        </div>
+    </section>
+   <section id="ofrecemos" aria-labelledby="ofrecemos-title">
+    <h2 id="ofrecemos-title">Lo que ofrecemos</h2>
+    <div class="container">
+        <article class="ofrecemos-item" tabindex="0" aria-describedby="desc1">
+            <img src="img-home/imagen1.png" alt="imagen1" />
+            <p id="desc1">Café premium recién molido, garantizando frescura y sabor intenso en cada taza.</p>
+        </article>
+        <article class="ofrecemos-item" tabindex="0" aria-describedby="desc2">
+            <img src="img-home/image2.png" alt="image2" />
+            <p id="desc2">Especialidades artesanales como espresso, latte, cappuccino, y más para todos los gustos.</p>
+        </article>
+        <article class="ofrecemos-item" tabindex="0" aria-describedby="desc3">
+            <img src="img-home/image3.png" alt="image3" />
+            <p id="desc3">Ambiente cálido y acogedor, el lugar perfecto para relajarse o trabajar con una taza en mano.</p>
+        </article>
+    </div>
+</section>
+        <section id="nuestra-especialidad" aria-labelledby="especialidad-title">
+        <h2 id="especialidad-title">Nuestra Especialidad</h2>
+        <div class="container">
+            <article class="carta" tabindex="0">
+                <h3>Espresso Clásico</h3>
+                <p>Intenso y aromático, preparado con granos seleccionados de alta calidad para una experiencia auténtica.</p>
+            </article>
+            <article class="carta" tabindex="0">
+                <h3>Latte</h3>
+                <p>Suave y cremoso, con leche vaporizada artesanal que complementa el café perfectamente.</p>
+            </article>
+            <article class="carta" tabindex="0">
+                <h3>Cappuccino</h3>
+                <p>Equilibrio ideal entre café, espuma y leche para un sabor clásico delicioso.</p>
+            </article>
+        </div>
+    </section>
+
+     <section id="reseñas">
+        <div class="container">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="reseña-card" tabindex="0">
+                <p>"El mejor café que he probado, el ambiente es increíble."</p>
+                <span>- Juan Pérez</span>
+                <div class="stars" aria-label="Valoración: 5 de 5 estrellas" role="img" title="5 estrellas">★★★★★</div>
+            </div>
+            <div class="reseña" tabindex="0">
+                <p>"Un lugar perfecto para relajarse y disfrutar de un buen café."</p>
+                <span>- María López</span>
+                <div class="stars" aria-label="Valoración: 5 de 5 estrellas" role="img" title="5 estrellas">★★★★★</div>
+            </div>
+            <div class="reseña" tabindex="0">
+                <p>"Excelente servicio y una gran variedad de opciones en el menú."</p>
+                <span>- Carlos García</span>
+                <div class="stars" aria-label="Valoración: 5 de 5 estrellas" role="img" title="5 estrellas">★★★★★</div>
+            </div>
+    </section>
+        
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Enlaces útiles</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-center">
+                <h3>Nuestras redes sociales:</h3>
+                <div class="social-links">
+                    <a href="https://api.whatsapp.com/send?phone=51910871288" target="_blank"><img src="img-home/whatsapp.png" alt="WhatsApp"></a>
+                    <a href="https://www.facebook.com/share/1AvYw4RsFh/" target="_blank"><img src="img-home/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/the_coffee_art?igsh=MWl4eHY4Z3RucmF1cQ==" target="_blank"><img src="img-home/instagram.png" alt="Instagram"></a>
+                </div>
+                <div class="footer-logo">
+                    <img src="img-home/Logo.png" alt="El Arte del Café">
+                </div>
+            </div>
+            
+            <div class="footer-right">
+                <h3>Horario de atención</h3>
+                <p>Lunes a Viernes: 7am - 10pm</p>
+                <p>Sábados y Domingos: 8am - 11pm</p>
+                <br>
+                <h3>Políticas</h3>
+                <ul>
+                    <li><a href="TyC.html">Términos y condiciones</a></li>
+                    <li><a href="politica.html">Política de privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <p>📍 Dirección: Praderas de Pariachi 3ra. Etapa Mz B Lote 12 Ate, Lima - Perú</p>
+            <p>📞 Teléfono: +51 910 871 288</p>
+            <p>📧 Correo: elartedelcafe54@gmail.com</p>
+        </div>
+
+        <!-- Chatbot Flotante -->
+    <!-- Chatbot Structure -->
+        <div id="chatbot-container" class="chatbot-hidden">
+            <div class="chatbot-header">
+                <h3>Asistente Virtual - El Arte del Café</h3>
+                <button id="close-chatbot">×</button>
+            </div>
+            <div id="chatbot-messages"></div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-user-input" placeholder="Escribe tu mensaje..." aria-label="Mensaje para el chatbot">
+                <button id="chatbot-send">Enviar</button>
+            </div>
+        </div>
+        <button id="chatbot-toggle" aria-label="Abrir chat de asistencia">
+            <img src="img-galeria/Logo.png" alt="Icono de chat">
+        </button>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 El Arte del Café. Todos los derechos reservados.</p>
+            <p>Proyecto académico para la Universidad Tecnológica del Perú</p>
+        </div>
+    </footer>
+    <script src="../Javascript/chatbots.js"></script>
+</body>
+</html>

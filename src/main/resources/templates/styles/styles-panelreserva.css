@@ -1,0 +1,113 @@
+.section {
+    padding: 20px;
+}
+
+.reservas-tabla {
+    overflow-x: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.reservas-tabla table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.reservas-tabla th,
+.reservas-tabla td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.reservas-tabla th {
+    background-color: #333;
+    color: white;
+}
+
+.estado.pendiente {
+    color: orange;
+    font-weight: bold;
+}
+
+.estado.confirmada {
+    color: green;
+    font-weight: bold;
+}
+
+.estado.cancelada {
+    color: red;
+    font-weight: bold;
+}
+
+.btn-ver,
+.btn-editar,
+.btn-eliminar {
+    padding: 6px 10px;
+    margin: 0 3px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-ver {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-editar {
+    background-color: #f1c40f;
+    color: white;
+}
+
+.btn-eliminar {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Estilos para el formulario de reservas */
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input,
+form select,
+form button {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-contenido {
+  background: #fff;
+  padding: 20px;
+  width: 400px;
+  border-radius: 5px;
+  position: relative;
+}
+.modal-contenido input, .modal-contenido select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+.cerrar {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}

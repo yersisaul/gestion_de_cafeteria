@@ -1,0 +1,703 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #fef8f5;
+    color: #1e3932;
+    padding-top: 60px; /* Espacio para el header fijo */
+
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover, a:focus {
+    color: #1e3932;
+    outline: none;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+header {
+    background-color: #1e3932;
+    padding: 1rem 0;
+    /*box-shadow: 0 2px 5px rgba(0,0,0,0.1);*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+
+}
+.container-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin: 0 auto;
+    width: 90%;
+}
+.logo {
+    height: 80px;
+    vertical-align: middle;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+nav ul li {
+    margin-left: 2rem;
+}
+nav ul li a {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #fef8f5;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #f2a365;
+}
+/* ESTILOS PARA EL BOTÓN DE NAVEGACIÓ N*/
+.btn-nav-reservar {
+    /* Reinicia los estilos del pseudo-elemento para este enlace */
+    /* Asegúrate de que el '::after' no se aplique a este botón */
+    position: static; /* Restablece la posición para que no use el ::after */
+    padding: 10px 20px; /* Padding interno para que parezca un botón */
+    background-color: #f2a365; /* Color de fondo del botón (tu color de acento) */
+    color: #1e3932; /* Color del texto del botón (oscuro) */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: 600; /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 0.8px; /* Espaciado entre letras */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra ligera para el botón */
+}
+
+.btn-nav-reservar:hover {
+    background-color: #e8c07d; /* Color más claro al pasar el mouse */
+    transform: translateY(-1px); /* Ligeramente elevado al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra más pronunciada */
+}
+
+/* para que la animacion de subrayado no afecte a todo el header */
+.btn-nav-reservar::after {
+    display: none; /* Oculta el pseudo-elemento subrayado para este botón */
+}
+
+
+
+
+/* Hero */
+.hero-banner {
+    position: relative; /* Para posicionar elementos internos si fuera necesario */
+    width: 100%;
+    height: 100%; /* Ocupa el 100% del alto de la ventana del navegador */
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    display: flex; /* Para centrar contenido si añades más tarde */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el contenedor de la imagen */
+.hero-portada {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.hero-portada::before {
+    content: ""; /* Esencial para que el pseudo-elemento aparezca */
+    position: absolute; /* Para que se superponga sobre la imagen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.8%;
+    background-color: rgba(0, 0, 0.7, 0.6); /* Negro con 50% de opacidad. Aumenta para más oscuridad (e.g., 0.6, 0.7) */
+    
+}
+
+/* Estilos para la imagen dentro del hero-portada */
+.hero-portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+    object-position: center; /* Centra la imagen en el contenedor */
+    opacity: 1; /* Aquí está la opacidad que solicitaste */
+    transition: opacity 0.3s ease-in-out; /* Transición suave para la opacidad */
+}
+
+
+/* Secciones */
+section {
+    padding: 3rem 0;
+}
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color:#1e3932;
+    letter-spacing: 2px;
+}
+#nosotros p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #1e3932;
+    text-align: center;
+    line-height: 1.7;
+}
+/* Misión y Visión */
+#mision-vision .container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 900px;
+}
+.mision-vision-item {
+    background: #f1f1ed;
+    box-shadow: 0 2px 8px rgba(142, 235, 212, 0.5);
+    border-radius: 10px;
+    padding: 1.8rem 1.5rem;
+    flex: 1 1 300px;
+    transition: transform 0.3s ease;
+}
+.mision-vision-item:hover, .mision-vision-item:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 15px rgba(59, 176, 117, 0.842);
+    outline: none;
+}
+.mision-vision-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: #1E3932;
+}
+.mision-vision-item p {
+    font-size: 1rem;
+    color: #4b3b2b;
+}
+/* === Lo que ofrecemos === */
+#ofrecemos {
+    background: linear-gradient(135deg,);
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+#ofrecemos h2 {
+    font-size: 2.8rem;
+    color: #1E3932;
+    margin-bottom: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 2px rgba(65, 126, 110, 0.15);
+    font-family: 'Poppins', sans-serif;
+}
+
+#ofrecemos .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.ofrecemos-item {
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 8px 25px rgba(30, 57, 50, 0.1);
+    text-align: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ofrecemos-item::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    right: -30%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(214, 244, 231, 0.4), transparent 70%);
+    transform: rotate(45deg);
+    z-index: 0;
+}
+
+.ofrecemos-item img {
+    max-width: 100px;
+    margin-bottom: 1.5rem;
+    z-index: 1;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.ofrecemos-item:hover img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.ofrecemos-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 600;
+    color: #2c4b41;
+    position: relative;
+    z-index: 1;
+}
+
+.ofrecemos-item:hover,
+.ofrecemos-item:focus-within {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 35px rgba(74, 158, 129, 0.651);
+    outline: none;
+}
+
+/* === Nuestra Especialidad === */
+#nuestra-especialidad {
+       background: linear-gradient();
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+#nuestra-especialidad h2 {
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    color: #1E3932;
+    font-weight: 900;
+    text-shadow: 1px 1px 3px rgba(79, 168, 139, 0.726);
+    letter-spacing: 0.05em;
+    font-family: 'Poppins', sans-serif;
+}
+
+#nuestra-especialidad .container {
+    display: flex;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.carta {
+    background: #f8f8f8;
+    flex-basis: 320px;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 6px 20px rgba(217, 231, 227, 0.63);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: #fffbfb;
+    cursor: default;
+}
+
+.carta::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, rgba(210, 243, 230, 0.623), transparent 70%);
+    z-index: 0;
+    transform: rotate(25deg);
+}
+
+.carta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 40px rgba(97, 153, 125, 0.747);
+}
+
+.carta h3 {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    color: #37391e;
+    position: relative;
+    z-index: 1;
+}
+
+.carta p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #1E3932;
+    position: relative;
+    z-index: 1;
+}
+
+ /* Reseñas */
+        #reseñas .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+            gap: 2rem;
+            padding-top: 1rem;
+        }
+        .reseña-card, .reseña {
+            background: #fff7f0;
+            padding: 1.5rem 1.2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(33, 133, 103, 0.15);
+            color: #02140f;
+            font-style: italic;
+            transition: box-shadow 0.3s ease;
+        }
+        .reseña-card:hover, .reseña:hover,
+        .reseña-card:focus, .reseña:focus {
+            box-shadow: 0 10px 25px rgba(44, 165, 129, 0.4);
+            outline: none;
+            cursor: default;
+        }
+        .reseña-card span, .reseña span {
+            display: block;
+            margin-top: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            text-align: right;
+            color: #001a12;
+        }
+        /* Star rating style */
+        .stars {
+            color:#2e9b76;
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+            letter-spacing: 2px;
+            text-align: right;
+        }
+
+/* Footer */
+
+footer {
+    background: #1e3932;/*linear-gradient(to right, #103a0b, #1e3932);*/
+    color: #ffffff;
+    padding: 50px 5% 30px;
+    text-align: center;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.footer-left, 
+.footer-center, 
+.footer-right {
+    width: 100%;
+    max-width: 300px;
+}
+
+.footer-left h3,
+.footer-center h3,
+.footer-right h3 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.footer-left h3::after,
+.footer-center h3::after,
+.footer-right h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: #e8c07d;
+}
+
+.footer-left ul,
+.footer-right ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.footer-left li,
+.footer-right li {
+    margin-bottom: 10px;
+}
+
+.footer-left a,
+.footer-right a {
+    transition: color 0.3s;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
+.footer-logo {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+.footer-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+}
+
+.footer-info p {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* Estilos del chatbot */
+/* Estilos del contenedor flotante */
+#chatbot-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #6f4e37;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chatbot-toggle:hover {
+    transform: scale(1.1) rotate(10deg);
+    background: #5a3c2c;
+}
+
+#chatbot-toggle img {
+    width: 70%;
+    filter: brightness(0) invert(1);
+}
+
+/* Contenedor principal del chat */
+#chatbot-container {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 350px;
+    max-height: 500px;
+    background: #fff9f0;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbot-visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Cabecera del chat */
+.chatbot-header {
+    background: linear-gradient(135deg, #6f4e37 0%, #5a3c2c 100%);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-header h3 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+}
+
+#close-chatbot {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+/* Área de mensajes */
+#chatbot-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #fff;
+    background-image: url('../img-home/coffee-pattern.png');
+    background-blend-mode: overlay;
+}
+
+/* Estilos de mensajes */
+.chatbot-message {
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 80%;
+    line-height: 1.4;
+    font-size: 0.95rem;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.bot-message {
+    background: #f3e9d2;
+    border-bottom-left-radius: 5px;
+    align-self: flex-start;
+    border: 1px solid #e0d5c0;
+}
+
+.user-message {
+    background: #6f4e37;
+    color: white;
+    border-bottom-right-radius: 5px;
+    align-self: flex-end;
+}
+
+/* Input y botones */
+.chatbot-input {
+    display: flex;
+    padding: 12px;
+    background: #f9f5f0;
+    border-top: 1px solid #e8e0d5;
+}
+
+#chatbot-user-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #d4a762;
+    border-radius: 25px;
+    margin-right: 8px;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+#chatbot-send {
+    background: #6f4e37;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#chatbot-send:hover {
+    background: #5a3c2c;
+}
+
+/* Quick replies */
+.quick-reply {
+    display: inline-block;
+    background: #f3e9d2;
+    border: 1px solid #d4a762;
+    border-radius: 15px;
+    padding: 6px 12px;
+    margin: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.quick-reply:hover {
+    background: #e6d9c1;
+    transform: translateY(-2px);
+}
+
+/* Typing indicator */
+.typing-indicator {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #f3e9d2;
+    border-radius: 18px;
+}
+
+.typing-indicator span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #6f4e37;
+    border-radius: 50%;
+    margin: 0 2px;
+    opacity: 0.4;
+    animation: typingAnimation 1s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typingAnimation {
+    0% { opacity: 0.4; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-3px); }
+    100% { opacity: 0.4; transform: translateY(0); }
+}
+
+
+
